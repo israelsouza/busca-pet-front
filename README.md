@@ -1,26 +1,30 @@
-# Busca Pet
-Projeto Interdisciplinar do 2º semestre do Curso Superior de Tecnologia em Desenvolvimento de Software Multiplataforma da Fatec Zona Leste.
+## Projeto Buscapet
 
-## Descrição
-O Busca Pet é um sistema em React.JS para publicação de posts de pets que foram perdidos e encontrados na rua. Este repositório contém o código fonte e os arquivos necessários para rodar a aplicação localmente.
+O buscapet surgiu de um projeto acadêmico, com o intuiuto de criar um website que permita a postagem de pets que foram perdidos ou encontrados, facilitando o reencontro entre donos e seus animais de estimação.
 
+O intuito de refazer esse projeto do zero é puramente experimantal, visando aprimorar minhas habilidades em desenvolvimento web e explorar novas tecnologias e práticas de desenvolvimento.
 
-## Sobre o Projeto
+### Tecnologias Utilizadas (antes x depois)
 
-O **Busca Pet** é uma plataforma colaborativa para conectar pessoas que perderam seus animais de estimação com pessoas que encontraram os animais na rua.
+| Tecnologia/Área     | Antes             | Depois                               |
+| ------------------- | ----------------- | ------------------------------------ |
+| Frontend            | React.js          | Next.js                              |
+| Backend             | Node.js + Express | Node.js + Express                    |
+| Banco de Dados      | Oracle            | PostgreSQL                           |
+| Autenticação        | JWT               | JWT                                  |
+| Hospedagem          | N/A               | Vercel (Frontend), Railway (Backend) |
+| Controle de Versão  | Git + GitHub      | Git + GitHub                         |
+| Testes              | Jest              | Jest                                 |
+| CI/CD               | N/A               | GitHub Actions                       |
+| Containerização     | N/A               | Docker                               |
+| Estilização         | CSS Puro          | Tailwind CSS                         |
+| Documentação        | README.md         | README.md + Swagger UI               |
+| Qualidade de Código | N/A               | ESLint + Prettier + editorconfig     |
+| Abordagem de branch | N/A               | main + develop + feature branches    |
 
-## Funcionalidades
+### Observações
 
-- Cadastro de animais perdidos e encontrados
-- Busca por localização
-- Contato direto entre usuários
-
-## Como Usar
-- Siga as instruções de instalação no arquivo [`INSTALL.md`](INSTALL.md).
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [`LICENSE`](LICENSE) para mais informações.
-
----
-Sinta-se à vontade para explorar, contribuir e compartilhar!
+- Devido a hospedagem gratuita limitada, o backend pode demorar alguns instantes para "acordar" após um período de inatividade.
+- O projeto está em constante evolução, e novas funcionalidades podem ser adicionadas no futuro.
+- Feedbacks e contribuições são bem-vindos!
+- O atual repositório contém apenas o frontend do projeto. O backend pode ser encontrado em um repositório separado.
