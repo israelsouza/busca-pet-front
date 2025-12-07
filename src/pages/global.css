@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+    --bg-color: #fff;
+    --foreground: #000;
+}
+
+.tema_escuro {
+    --bg-color: #000;
+    --foreground: #fff;
+}
+
+@theme inline {
+    --color-background: var(--bg-color);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist);
+    --font-mono: var(--font-geist-mono);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+}
