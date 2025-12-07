@@ -1,0 +1,35 @@
+{
+  "name": "busca-pet-front",
+  "version": "1.0.0",
+  "description": "O buscapet surgiu de um projeto acadêmico, com o intuiuto de criar um website que permita a postagem de pets que foram perdidos ou encontrados, facilitando o reencontro entre donos e seus animais de estimação.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "bugs": {
+    "url": "https://github.com/israelsouza/busca-pet-front/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "buscapet",
+    "pet",
+    "busca",
+    "perdido",
+    "encontrado",
+    "academico"
+  ],
+  "dependencies": {
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}
