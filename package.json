@@ -12,7 +12,7 @@
     "prettier:fix": "prettier --write .",
     "eslint:check": "eslint ./src",
     "eslint:fix": "eslint ./src --fix",
-    "commit": "cz"
+    "commit": "prettier --check . && cz"
   },
   "dependencies": {
     "next": "16.1.0",
