@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
   --bg-color: #fff;
   --foreground: #000;
 }
