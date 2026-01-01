@@ -3,6 +3,7 @@ import Hero from "./_components/Hero";
 import Brief from "./_components/Brief";
 import HowWorks from "./_components/HowWorks";
 import Cooperate from "./_components/Cooperate";
+import Footer from "@/components/Footer";
 
 export default function EmConstrucao() {
   return (
@@ -12,6 +13,7 @@ export default function EmConstrucao() {
       <Brief />
       <HowWorks />
       <Cooperate />
+      <Footer />
     </>
   );
 }
