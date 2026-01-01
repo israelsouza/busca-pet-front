@@ -1,6 +1,7 @@
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import Brief from "./_components/Brief";
+import HowWorks from "./_components/HowWorks";
 
 export default function EmConstrucao() {
   return (
@@ -8,6 +9,7 @@ export default function EmConstrucao() {
       <Header />
       <Hero />
       <Brief />
+      <HowWorks />
     </>
   );
 }
