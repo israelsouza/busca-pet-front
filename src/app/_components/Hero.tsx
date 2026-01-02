@@ -1,7 +1,6 @@
 export default function Hero() {
   return (
-    <main className="relative flex bg-[url('/hero.png')] bg-no-repeat bg-cover bg-center min-h-[400px] h-[60vh] md:h-[500px] lg:h-[600px] bg-amber-800 items-center justify-center md:justify-start px-6 md:px-16 lg:px-24">
-      {/* Overlay para melhorar contraste */}
+    <section className="relative flex bg-[url('/hero.png')] bg-no-repeat bg-cover bg-center min-h-[400px] h-[60vh] md:h-[500px] lg:h-[600px] bg-amber-800 items-center justify-center md:justify-start px-6 md:px-16 lg:px-24">
       <div className="absolute inset-0 bg-black/40 md:bg-black/30"></div>
 
       <div className="relative z-10 flex flex-col text-center md:text-left max-w-[90%] md:max-w-[550px]">
@@ -15,6 +14,6 @@ export default function Hero() {
           Cadastre, busque e traga esperança para quem precisa!
         </p>
       </div>
-    </main>
+    </section>
   );
 }

@@ -1,22 +1,72 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import AuthButtons from "./AuthButtons";
+import { useRouter } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
+import type { MouseEvent } from "react";
+// LIBERAR NA PROXIMA ENTREGA
+// import AuthButtons from "./AuthButtons";
 
 const NAV_LINKS = [
   { label: "Inicio", href: "/" },
-  { label: "Reencontro", href: "/#reencontro" },
-  { label: "Como funciona", href: "/#como-funciona" },
-  { label: "Colabore", href: "/#colabore" },
+  { label: "Reencontro", href: "/#brief" },
+  { label: "Como funciona", href: "/#howworks" },
+  { label: "Colabore", href: "/#cooperate" },
 ];
 
 export default function Header() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    const handleClickOutside = (event: globalThis.MouseEvent) => {
+      if (
+        menuOpen &&
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside as any);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside as any);
+    };
+  }, [menuOpen]);
+
+  const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.includes("#")) {
+      setMenuOpen(false);
+      return;
+    }
+
+    const [pathPart, hashPart] = href.split("#");
+    const targetPath = pathPart || "/";
+    const currentPath =
+      typeof window !== "undefined" ? window.location.pathname : "/";
+
+    if (targetPath === "/" || targetPath === currentPath) {
+      e.preventDefault();
+      const id = hashPart;
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        router.push(href);
+      }
+      setMenuOpen(false);
+    }
+  };
 
   return (
     <header
+      ref={headerRef}
       className="bg-[#efa355] flex items-center px-6 relative"
       suppressHydrationWarning
     >
@@ -24,10 +74,10 @@ export default function Header() {
         <Link href="/">
           <Image
             src="/logo.png"
-            alt="Logo"
+            alt="Logo da plataforma Busca Pet. É um cachorro com uma lupa, simbolizando a busca por um pet perdido."
             width={150}
             height={150}
-            className="max-[880px]:w-[80px] max-[880px]:h-[80px]"
+            className="max-[880px]:w- max-[880px]:h-"
           />
         </Link>
       </div>
@@ -41,6 +91,7 @@ export default function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={(e) => handleNavClick(e as any, link.href)}
                     className="text-2xl max-[1120px]:text-lg p-2 cursor-pointer relative transition-all duration-300 ease-out hover:scale-105 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full block"
                   >
                     {link.label}
@@ -51,7 +102,8 @@ export default function Header() {
           </nav>
         </div>
         <div className="flex flex-auto justify-end items-center gap-x-4">
-          <AuthButtons />
+          {/* LIBERAR NA PROXIMA ENTREGA
+          <AuthButtons /> */}
         </div>
       </div>
 
@@ -81,17 +133,26 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-0 right-0 bg-[#efa355] shadow-lg z-50 overflow-hidden transition-all duration-300 ease-out ${
-          menuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-        } hidden max-[880px]:block`}
+        className={`absolute top-full left-0 right-0 bg-[#efa355] shadow-lg z-50 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${menuOpen
+            ? "max-h-[600px] opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-2"
+          } hidden max-[880px]:block`}
       >
         <ul className="flex flex-col p-4 gap-y-2">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
+          {NAV_LINKS.map((link, index) => (
+            <li
+              key={link.href}
+              className="transition-all duration-300 ease-out"
+              style={{
+                transitionDelay: menuOpen ? `${index * 50}ms` : "0ms",
+                opacity: menuOpen ? 1 : 0,
+                transform: menuOpen ? "translateX(0)" : "translateX(-10px)",
+              }}
+            >
               <Link
                 href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-xl p-3 block cursor-pointer transition-all duration-300 hover:bg-white/20 hover:text-white rounded-lg"
+                onClick={(e) => handleNavClick(e as any, link.href)}
+                className="text-xl p-3 block cursor-pointer transition-all duration-300 hover:bg-white/20 hover:text-white rounded-lg active:scale-95"
               >
                 {link.label}
               </Link>
@@ -99,7 +160,8 @@ export default function Header() {
           ))}
         </ul>
         <div className="flex flex-col px-4 pb-8 gap-y-3">
-          <AuthButtons isMobile />
+          {/* LIBERAR NA PROXIMA ENTREGA
+          <AuthButtons isMobile /> */}
         </div>
       </div>
     </header>

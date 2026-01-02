@@ -9,10 +9,12 @@ export default function EmConstrucao() {
   return (
     <>
       <Header />
-      <Hero />
-      <Brief />
-      <HowWorks />
-      <Cooperate />
+      <main>
+        <Hero />
+        <Brief />
+        <HowWorks />
+        <Cooperate />
+      </main>
       <Footer />
     </>
   );
