@@ -133,10 +133,11 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-0 right-0 bg-[#efa355] shadow-lg z-50 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${menuOpen
+        className={`absolute top-full left-0 right-0 bg-[#efa355] shadow-lg z-50 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+          menuOpen
             ? "max-h-[600px] opacity-100 translate-y-0"
             : "max-h-0 opacity-0 -translate-y-2"
-          } hidden max-[880px]:block`}
+        } hidden max-[880px]:block`}
       >
         <ul className="flex flex-col p-4 gap-y-2">
           {NAV_LINKS.map((link, index) => (
