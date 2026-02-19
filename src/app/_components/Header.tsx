@@ -67,7 +67,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="bg-[#efa355] flex items-center px-6 relative"
+      className="bg-primary flex items-center px-6 relative"
       suppressHydrationWarning
     >
       <div className="flex">
@@ -133,7 +133,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`absolute top-full left-0 right-0 bg-[#efa355] shadow-lg z-50 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`absolute top-full left-0 right-0 bg-primary shadow-lg z-50 overflow-hidden transition-[max-height,opacity,transform] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           menuOpen
             ? "max-h-[600px] opacity-100 translate-y-0"
             : "max-h-0 opacity-0 -translate-y-2"
