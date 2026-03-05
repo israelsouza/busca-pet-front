@@ -16,6 +16,7 @@
   --color-background: var(--bg-color);
   --color-foreground: var(--foreground);
   --color-primary: #efa355;
+  --color-secundary: #e8d5c4;
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
 }
