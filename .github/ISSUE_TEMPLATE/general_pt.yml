@@ -1,0 +1,44 @@
+name: Issue Geral
+description: Funcionalidade, melhoria ou sugestao geral para o projeto
+title: "[ <<ISSUE_NUMBER>> - [IDEA] ] - algum titulo aqui"
+
+body:
+  - type: textarea
+    attributes:
+      label: 🚀 Descricao
+      placeholder: |
+        Voce pode descrever de forma clara e concisa:
+        * qual e o problema
+        * o que voce quer que aconteca
+        * quaisquer solucoes alternativas ou funcionalidades consideradas
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: ✍️ Contexto
+      placeholder: |
+        Uma breve descricao do contexto da tarefa, por que ela e importante e como ela se encaixa no projeto como um todo.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: 📝 Tarefas
+      placeholder: |
+        - [ ] alguma tarefa aqui
+        - [ ] alguma tarefa aqui
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📷 Referencias / 🔗 Anexos
+      placeholder: |
+        Voce pode anexar capturas de tela ou links aqui.
+        * Desktop
+        * Mobile
+        * Links
+        * [algum link]()
+    validations:
+      required: false
