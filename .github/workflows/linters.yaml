@@ -6,9 +6,6 @@ jobs:
   commit-lint:
     name: commitlint
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     steps:
       - uses: actions/checkout@v4
         with:
@@ -17,10 +14,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
-          cache-dependency-path: web/yarn.lock
+          cache: "npm"
+          cache-dependency-path: package-lock.json
 
-      - run: yarn install --immutable
+      - run: npm install
 
       - run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
