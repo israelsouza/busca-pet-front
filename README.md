@@ -8,12 +8,15 @@ O Busca Pet é uma aplicação web desenvolvida para ajudar na localização de 
 
 ### Áreas do Projeto
 
-- **Frontend**: Desenvolvido com Next.js
-- **Backend**: Construído com Node.js, TypeScript e Express ([nesse repositorio](https://github.com/israelsouza/busca-pet-back))
-- **Banco de Dados**: Utiliza PostgreSQL containerizado com Docker, gerenciado através do Sequelize ORM
-- **Hospedagem**: Planejado para deploy nas plataformas: Vercel (frontend) e Railway (backend)
+| Área                                                                         | Antes     | Agora        |
+| ---------------------------------------------------------------------------- | --------- | ------------ |
+| Frontend                                                                     | React     | Next.js      |
+| Backend ([nesse repositorio](https://github.com/israelsouza/busca-pet-back)) | Node.js   | NestJS       |
+| Banco de Dados                                                               | Oracle    | PostgreSQL   |
+| Autenticação                                                                 | JWT       | ???          |
+| Hospedagem                                                                   | N/A - N/A | Vercel - ??? |
 
-### Tecnologias Instaladas
+### Tecnologias Utilizadas
 
 | Tecnologia/Área        | Antes    | Agora                            |
 | ---------------------- | -------- | -------------------------------- |
@@ -55,23 +58,25 @@ O Busca Pet é uma aplicação web desenvolvida para ajudar na localização de 
 
 ```
 busca-pet-front/
+├── .github/             # Arquivos de configuração do CI
 ├── public/             # Arquivos estáticos (imagens, fontes, etc.)
 ├── src/
 │   ├── app             # Páginas do Next.js
+│   └── components      # Componentes reutilizáveis
 ├── .editorconfig       # Configuração do EditorConfig
-|── .gitignore          # Arquivos e pastas ignorados pelo Git
+├── .gitignore          # Arquivos e pastas ignorados pelo Git
 ├── .nvmrc              # Versão do Node.js utilizada no projeto
 ├── .prettierignore     # Arquivos e pastas ignorados pelo Prettier
 ├── .prettierrc         # Configuração do Prettier
+├── commitlint.config.js # Configuração do Commitlint
 ├── eslint.config.mjs   # Configuração do ESLint
 ├── next-env.d.ts       # Tipagens do Next.js
 ├── next.config.ts      # Configuração do Next.js
-|── notes.md            # Notas, informações adicionais e ideias para o projeto
 ├── package.json        # Dependências e scripts do Node.js
 ├── postcss.config.mjs  # Configuração do PostCSS
-|── README.md           # Documentação do projeto
+├── README.md           # Documentação do projeto
 ├── tsconfig.json       # Configuração do TypeScript
-├── yarn.lock           # Versões exatas das dependências
+└── yarn.lock           # Versões exatas das dependências
 
 ```
 
