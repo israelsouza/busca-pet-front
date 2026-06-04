@@ -2,7 +2,7 @@
   "name": "buscapet-front",
   "version": "1.0.0",
   "repository": "https://github.com/israelsouza/busca-pet-front.git",
-  "author": "Israel de Souza <israellimas@hotmail.com>",
+  "author": "Israel de Souza",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "lucide-react": "0.562.0",
-    "next": "16.2.5",
+    "next": "16.2.6",
     "react": "19.2.1",
     "react-dom": "19.2.1"
   },
