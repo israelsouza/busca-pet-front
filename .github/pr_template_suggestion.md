@@ -1,0 +1,36 @@
+<!-- esse aqui é um exemplo de como eu to usando nos meus projetos, caso vc queira reaproveitar a estrutura toda ou apenas um trecho dela -->
+
+_Don't forget to keep title's pattern:_
+
+- _Issue PR: **[CODE-<ISSUE_ID>] + title (PR #<PR_NUMBER>)**_
+- _Sub-issue PR: **[CODE-<ISSUE_ID>][SUB-<SUBISSUE_ID>] + title (PR #<PR_NUMBER>)**_
+
+_Base branch:_
+
+- _Issue PR → `dev`_
+- _Sub-issue PR → parent issue branch (`feat/CODE-<ISSUE_ID>`)_
+
+closes #[issue_number]
+
+### 🚀 Description
+
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+
+### 📷 Evidences
+
+Attach some prints, gifs or videos of the new change
+
+## 🏷️ Type of change
+
+Please delete options that are not relevant.
+
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+
+## ☑️ Checklist:
+
+- [ ] I have performed a self-review of my code
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes

@@ -1,0 +1,95 @@
+name: Relatorio de Bug
+description: Reporte um problema ou comportamento inesperado
+title: "[ <<ISSUE_NUMBER>> - [BUG] ] - Titulo do relatorio de bug"
+labels: [bug]
+
+body:
+  - type: textarea
+    attributes:
+      label: 🐛 Descreva o bug
+      description: Uma descricao clara e concisa do bug.
+      placeholder: O que aconteceu?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🧪 Como reproduzir
+      description: Passos para reproduzir o comportamento.
+      placeholder: |
+        1. Va para '...'
+        2. Clique em '...'
+        3. Role ate '...'
+        4. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🎯 Comportamento esperado
+      description: Uma descricao clara e concisa do que deveria acontecer.
+      placeholder: O que deveria ter acontecido?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📷 Evidencias
+      description: Se aplicavel, adicione capturas de tela para ajudar a explicar o problema.
+      placeholder: Cole imagens ou links aqui.
+    validations:
+      required: false
+
+  - type: dropdown
+    attributes:
+      label: 🖥️ Desktop
+      description: Preencha as informacoes a seguir
+      options:
+        - OS: Windows
+        - OS: macOS
+        - OS: Linux
+        - Outro
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 🖥️ Navegador Desktop
+      placeholder: ex.: Chrome, Safari, Firefox
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 🖥️ Versao do Navegador Desktop
+      placeholder: ex.: 22
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 📱 Dispositivo Smartphone
+      placeholder: ex.: iPhone 6
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 📱 SO do Smartphone
+      placeholder: ex.: iOS 8.1 / Android 13
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 📱 Navegador do Smartphone
+      placeholder: ex.: Safari, Chrome
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: 📱 Versao do Navegador do Smartphone
+      placeholder: ex.: 22
+    validations:
+      required: false
